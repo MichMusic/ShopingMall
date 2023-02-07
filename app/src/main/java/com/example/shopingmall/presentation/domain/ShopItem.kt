@@ -1,8 +1,12 @@
 package com.example.shopingmall.presentation.domain
 
 data class ShopItem(
-    val id: Int,
     val name: String,
     val counter: Int,
-    val having: Boolean
-)
+    val having: Boolean,
+    var id: Int = undefinedId
+) {
+    companion object {
+        const val undefinedId = -1
+    }
+}
